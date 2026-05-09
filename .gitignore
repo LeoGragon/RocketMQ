@@ -9,6 +9,7 @@ target/
 .idea/jarRepositories.xml
 .idea/compiler.xml
 .idea/libraries/
+.idea/inspectionProfiles/
 *.iws
 *.iml
 *.ipr
@@ -38,6 +39,11 @@ build/
 ### Node ###
 node_modules/
 **/src/main/frontend/dist/
+**/src/main/frontend/node_modules/
+**/src/main/frontend/.vite/
+
+### Local config ###
+rocketmq-console/src/main/resources/application.yml
 
 ### Mac OS ###
 .DS_Store

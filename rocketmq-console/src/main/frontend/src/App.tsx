@@ -1,8 +1,9 @@
 import { useState } from 'react'
 import { Layout, Menu, Typography } from 'antd'
-import { ClusterOutlined, SendOutlined, RocketOutlined, CustomerServiceOutlined, SearchOutlined } from '@ant-design/icons'
+import { ClusterOutlined, SendOutlined, RocketOutlined, CustomerServiceOutlined, SearchOutlined, ThunderboltOutlined } from '@ant-design/icons'
 import Dashboard from './pages/Dashboard'
 import SendMessage from './pages/SendMessage'
+import Simulation from './pages/Simulation'
 import OnlineConsumer from './pages/OnlineConsumer'
 import MessageQuery from './pages/MessageQuery'
 
@@ -12,6 +13,7 @@ const { Title } = Typography
 const MENU_ITEMS = [
   { key: 'cluster', icon: <ClusterOutlined />, label: 'Cluster' },
   { key: 'send', icon: <SendOutlined />, label: 'Send Message' },
+  { key: 'simulation', icon: <ThunderboltOutlined />, label: 'Simulation' },
   { key: 'consumer', icon: <CustomerServiceOutlined />, label: 'Online Consumer' },
   { key: 'query', icon: <SearchOutlined />, label: 'Message Query' },
 ]
@@ -47,6 +49,7 @@ function App() {
         <Content style={{ padding: 24 }}>
           {activeKey === 'cluster' && <Dashboard />}
           {activeKey === 'send' && <SendMessage />}
+          {activeKey === 'simulation' && <Simulation />}
           {activeKey === 'consumer' && <OnlineConsumer />}
           {activeKey === 'query' && <MessageQuery />}
         </Content>
